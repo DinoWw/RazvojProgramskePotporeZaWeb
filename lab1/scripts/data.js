@@ -9,9 +9,6 @@ const data = {
                     "name" : "Čekić", "image" : "hammer.png"
                 },
                 { 
-                    "name" : "Metar", "image" : "tape measure.png"
-                },                
-                { 
                     "name" : "Odvijač", "image" : "screwdriver.png"
                 },
                 { 
@@ -22,15 +19,7 @@ const data = {
                 },              
                 { 
                     "name" : "Bušilica", "image" : "drill.png"
-                },               
-
-                { 
-                    "name" : "Izolir traka", "image" : "electric tape.png"
-                },             
-
-                { 
-                    "name" : "Kružna pila", "image" : "saw.png"
-                }              
+                } 
             ]
         },
         { 
@@ -39,34 +28,19 @@ const data = {
             "products" : [
                 { 
                     "name" : "Pjesak", "image" : "sand.png"
-                },                
-                { 
-                    "name" : "Kamen", "image" : "stones.png"
-                },                
+                },         
                 { 
                     "name" : "Šljunak", "image" : "gravel.png"
-                },                
-                { 
-                    "name" : "Kamene ploče", "image" : "stone.png"
-                },                
+                },          
                 { 
                     "name" : "Deko kamen", "image" : "deco_stone.png"
-                },                
-                { 
-                    "name" : "Asfalt", "image" : "asphalt.png"
-                },                
-                { 
-                    "name" : "Zemlja", "image" : "dirt.png"
-                },                
+                },        
                 { 
                     "name" : "Kamen za zid", "image" : "stone_wall.png"
                 },
                 { 
                     "name" : "Cigle", "image" : "brick_wall.png"
                 },      
-                { 
-                    "name" : "Granit", "image" : "granite.png"
-                },
             ]
         },
         { 

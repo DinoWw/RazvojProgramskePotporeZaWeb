@@ -1,7 +1,7 @@
 
 * {
     box-sizing: border-box;
-    /*border: 1px solid lime;/**/
+    /**border: 1px solid lime;/**/
     border-radius: 5px
 }
 
@@ -10,7 +10,7 @@
 body {
     padding: 20px;
     margin: 0px;
-    background: url(../images/brick_bg.jpg) center/10%;
+    background: url(../images/brick.png) center/10%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     min-height: 100vh;
 }
@@ -26,6 +26,7 @@ body {
 
 header {
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .grid-container{
@@ -84,9 +85,10 @@ header {
 
 header{
     height: 100px;
+    width: 100%;
 }
 #header_logo {
-    height: 85%;
+    height: 90px;
     width: max(15%, 120px);
     margin-left: 0;
 }
@@ -98,7 +100,7 @@ header{
 
 #basketnsearch {
     margin-left: 0;
-    height:85%;
+    height: 90px;
     position: relative;
 }
 
@@ -113,7 +115,7 @@ header{
 }
 
 #kategorija {
-    font-size: 4vw;
+    font-size: 40px;
     flex-grow: 8;
 }
 
@@ -128,14 +130,17 @@ header{
 
 .product_card {
     width: 170px;
+    height: 250px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
 .product_card .img{
     width: 90%;/**/
+    height: 50%;
     display: inline-block;
     margin-top: 5px;
+    object-fit: cover;
 }
 
 
