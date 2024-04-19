@@ -15,7 +15,7 @@ function cardImport(category_name = data.categories[0].name){
         let clone = cardTemplate.content.cloneNode(true);
 
         let image = clone.querySelector("img");
-        image.src = "images/logo.png";
+        image.src = `images/product/${product.image}`;
         clone.querySelector(".product_name").innerHTML = product.name;
         clone.querySelector(".product_category").innerHTML = data.categories[categoryIndex].name;
 

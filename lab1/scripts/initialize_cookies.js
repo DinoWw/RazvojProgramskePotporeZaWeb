@@ -1,1 +1,1 @@
-if(!localStorage.cart) localStorage.cart = JSON.parse({});
+if(!localStorage.cart) localStorage.cart = JSON.stringify({});

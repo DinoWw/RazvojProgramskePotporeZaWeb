@@ -18,7 +18,7 @@ function fillCart(){
             
         let newNaziv = nazivTemplate.content.cloneNode(true);
         let newKolicina = kolicinaTemplate.content.cloneNode(true);
-        newNaziv.querySelector(".naziv_proizvoda").innerHTML = naziv;
+        newNaziv.querySelector(".naziv_proizvoda").innerHTML = naziv.split('_')[1];
         
         const count = newKolicina.querySelector(".kolicina_proizvoda").querySelector(".item_count");
         count.innerHTML = cart[naziv];

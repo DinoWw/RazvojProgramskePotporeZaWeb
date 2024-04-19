@@ -122,7 +122,7 @@ header{
     flex-basis: 40px;
     /* TODO: text resizea ove divove pa nebudu 40px ni nis */
     padding:0.7%;
-    gap: 0.7% 0.7%;
+    gap: 10px 0.7%;
     flex-wrap: wrap;
 }
 
