@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gradjevinski materijali</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <!--<link rel="icon" href="./favicon.ico" type="image/x-icon">-->
+
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/initialize_cookies.js" defer></script>
+    <script src="scripts/header_cart_count.js" defer></script>
+    <script src="scripts/cart_managment.js" defer></script>
+    <script src="scripts/import_cards.js" defer></script>
+    <script src="scripts/import_categories.js" defer></script>
+  </head>
+  <body>
+    <div id="bg">
+        <header class="container">
+            <div id="header_logo" class="header_element">
+                <img id="header_logo_img" src="images/logo.png">
+            </div>
+            <span id="kategorija" class="header_element">
+                [KATEGORIJA]
+            </span>
+            <div id="basketnsearch" class="header_element">
+                <img class="img_in_div" src="images/search.jpg">
+                <a href="cart.html"><img class="img_in_div" id="basket_img" src="images/cart.jpg"></a>
+                <span id="header_cart_count">0</span>
+            </div>
+        </header>
+        <div id="page_body", class="container">
+            <div id="sidebar" class="collumn">
+                <ul id="category_list" class="vertical_list">
+                    <li><b>Kategorije</b></li>
+                    <template id="category_name_template">
+                        <li class="category_name">
+                            <button class="category_button">
+
+                            </button>
+                        </li>
+                    </template>
+                </ul>
+                <ul id="about", class="vertical_list">
+                    <li >Kontakt</li>
+                    <li >Newsletter</li>
+                    <li >Pretplati se</li>
+                </ul>
+            </div>
+            <div id="main_content" class="collumn">
+                <div id="poster">
+                    <img id="poster_img" src="images/poster.jpg">
+                    <span class="hello_text"><b>POZDRAV!</b></span>
+                </div>
+                <template id="product_card_template">
+                    <div class="product_card">
+                        <img class="img">
+                        <span class="cart_ico_container"><img class="cart_ico" product_code="" src="images/cart.jpg"></span>
+                        <span class="product_count">0</span>
+                        <p class="product_name">Prozivod_ime</p>
+                        <p class="product_category">Kategorija_ime</p>    
+                    </div>
+                </template>
+                <div class="product_container container">
+    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  </body>
+</html>

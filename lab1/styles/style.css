@@ -1,0 +1,246 @@
+
+* {
+    box-sizing: border-box;
+    /*border: 1px solid lime;/**/
+    border-radius: 5px
+}
+
+
+
+body {
+    padding: 20px;
+    margin: 0px;
+    background: url(../images/brick_bg.jpg) center/10%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 100vh;
+}
+#bg {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2vw;
+}
+
+.header_element {
+    display: inline;
+    /*width:20%*/
+}
+
+header {
+    justify-content: space-between;
+}
+
+.grid-container{
+    display: grid;
+}
+
+.container {
+    display: flex;
+}
+
+.collumn {
+    display:inline;
+}
+#sidebar {
+    width: max(15%, 120px);
+}
+
+#category_list li button{
+    width: 100px;
+    text-align: left;
+}
+
+#main_content {
+    width: 85%;
+}
+
+.vertical_list {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+#poster {
+    position: relative;
+}
+
+#poster .hello_text {
+    position: absolute;
+    font-size: 40px;
+    color: black;
+    left: 20px;
+    bottom: 20px;
+    background-color: rgba(255,255,255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#poster_img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+
+}
+
+
+
+
+header{
+    height: 100px;
+}
+#header_logo {
+    height: 85%;
+    width: max(15%, 120px);
+    margin-left: 0;
+}
+
+#header_logo_img {
+    height: 100%;
+    object-fit: contain;
+}
+
+#basketnsearch {
+    margin-left: 0;
+    height:85%;
+    position: relative;
+}
+
+#header_cart_count {
+    position: absolute;
+    right: 16px;
+    top: 5px;
+}
+
+.img_in_div {
+    height: 100%;
+}
+
+#kategorija {
+    font-size: 4vw;
+    flex-grow: 8;
+}
+
+.product_container{
+    justify-content: flex-start;
+    flex-basis: 40px;
+    /* TODO: text resizea ove divove pa nebudu 40px ni nis */
+    padding:0.7%;
+    gap: 0.7% 0.7%;
+    flex-wrap: wrap;
+}
+
+.product_card {
+    width: 170px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.product_card .img{
+    width: 90%;/**/
+    display: inline-block;
+    margin-top: 5px;
+}
+
+
+.product_card .product_name {
+    text-wrap: true;
+    width: 100%
+}
+/*
+.product_card span {
+    display: none;
+}
+
+.product_card:hover span {
+    position: relative;
+    top: -60px;
+    display: block;
+}
+*/
+
+.product_card span {
+    position: relative;
+    text-align: center;
+    display: block;
+}
+
+.product_card span .cart_ico {
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+}
+
+.product_card:hover span .cart_ico {
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: calc(50% - 25px);
+    cursor: pointer;
+    
+}
+
+.product_card .product_count {
+    display: inline-block;
+    position: absolute;
+
+}
+
+.product_card:hover .product_count {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    margin: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* odavde nadolje vezano uz cart, mozda bi bilo dobro odvojit header syle u drugi file*/
+
+#cart_div{
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+#cart_title {
+    font-size: 34px;
+    margin: 20px 0;
+}
+
+#cart_content {
+    width: 100%;
+}
+
+#proizvodi {
+    width: 50%;
+    padding-left: 10%;
+}
+
+#kolicina {
+    width: 50%;
+    text-align: right;
+    padding-right: 10%;
+}
+
+.kolicina_proizvoda {
+    height: 30px;
+}
+.naziv_proizvoda {
+    height: 30px;
+}
+
+.kolicina_proizvoda .item_count{
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+}
+
+#kolicina_list {
+    list-style: none;
+    padding: 0;
+}
+#naziv_list {
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;
+}
