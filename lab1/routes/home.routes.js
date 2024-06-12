@@ -38,7 +38,7 @@ router.get('/getCategories', (req, res, next) => {
 
 router.get('/getProducts/:id', (req, res, next) => {
     // TODO: send error if id invalid
-    res.send(JSON.stringify(data.categories[id].products || data.categories[0].products));
+    res.send(JSON.stringify(data.categories[req.params.id].products || data.categories[0].products));
 })
 
 

@@ -19,7 +19,6 @@ function ensureSessionCartItem(session, id){
 
 function accountCategory(category, cart){
 
-    // || data.categories[0] is redundant but doesn't hurt
     let categoryAccounted = data.categories[category];
     if( categoryAccounted == undefined){
         category = data.categories[0].name;
@@ -28,7 +27,7 @@ function accountCategory(category, cart){
 
 
     for(const [index, product] of categoryAccounted.products.entries()){
-        product.count = cart[`${categoryAccounted.name}_${index}`] | 0;
+        product.count = cart[`${category}_${index}`] | 0;
         console.log(`${category}_${index}`)
     }
     return categoryAccounted;
