@@ -19,7 +19,6 @@ router.get('/', (req, res, next) => {
             "name": data.categories[itemSplit[0]].products[itemSplit[1]].name
         };
     }
-    console.log("AAAAAAAAAAA" ,namedCart)
 
 
     res.render("cart", {
