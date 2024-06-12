@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gradjevinski materijali</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <!--<link rel="icon" href="./favicon.ico" type="image/x-icon">-->
+
+    <script src="scripts/header_cart_count.js" defer></script>
+    <script src="scripts/cart_managment.js" defer></script>
+    <script src="scripts/manage_cart.js" defer></script>
+  </head>
+<body>
+
+    <div id="bg">
+        
+        <%- include(`partials/header`, {title: "Građevinski Materijali"}); %>
+
+        <div id="cart_div" class="container">
+            <span id="cart_title" >
+                KOŠARICA
+            </span>
+            <div id="cart_content" class="container">
+                <div id="proizvodi">
+                    <b>Naziv proizvoda</b>
+                    <ul id="naziv_list">
+                        <% for(const item in cart){ %>
+                            <li class="naziv_proizvoda">
+                                <%= cart[item].name %>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+                <div id="kolicina">
+                    <b>Količina</b>
+                    <ul id="kolicina_list">
+                        <% for(const item in cart){ %>
+                            <li class="kolicina_proizvoda", id="<%=`kolicina_${item}`%>">
+                                <button class="minus">-</button>
+                                <span class="item_count"><%= cart[item].count %></span>
+                                <button class="plus">+</button>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gradjevinski materijali</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <!--<link rel="icon" href="./favicon.ico" type="image/x-icon">-->
+
+    <script src="scripts/initialize_cookies.js" defer></script>
+    <script src="scripts/header_cart_count.js" defer></script>
+    <script src="scripts/cart_managment.js" defer></script>
+    <script src="scripts/manage_cards.js" defer></script>
+    <!--<script src="scripts/import_categories.js" defer></script>-->
+  </head>
+  <body>
+    <div id="bg">
+
+        <%- include(`partials/header`, {title: category.name}); %>
+
+        </header>
+        <div id="page_body", class="container">
+            <div id="sidebar" class="collumn">
+                <ul id="category_list" class="vertical_list">
+                    <li><b>Kategorije</b></li>
+                    <% category_titles.forEach( (title, i) => { %>
+                        <li class="category_name">
+                            <form action="/">
+                            <button name="category" value="<%= i %>" class="category_button" type="submit">
+                                <%= title %>
+                            </button>
+                            </form>
+                        </li>
+                    <% }) %>
+                </ul>
+                <ul id="about", class="vertical_list">
+                    <li >Kontakt</li>
+                    <li >Newsletter</li>
+                    <li >Pretplati se</li>
+                </ul>
+            </div>
+            <div id="main_content" class="collumn">
+                <div id="poster">
+                    <img id="poster_img" src="images/poster.jpg">
+                    <span class="hello_text"><b>Dobrodošli u našu online trgovinu!</b></span>
+                </div>
+                <div class="product_container container">
+                    <% category.products.forEach( (product, i) => { %>
+                        <div class="product_card">
+                            <img class="img" src="images/product/<%=product.image%>">
+                            <span class="cart_ico_container"><img class="cart_ico" product_code=<%=`${category.index}_${i}`%> src="images/cart.png"></span>
+                            <span class="product_count"><%=product.count%></span>
+                            <p class="product_name"><%= product.name %></p>
+                            <p class="product_category"><%= category.name %></p>    
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  </body>
+</html>
